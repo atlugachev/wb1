@@ -1,0 +1,26 @@
+.error {
+    color: blue;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #e6e6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #303C54;
+  background-repeat: repeat;
+  background-size: 10%;
+}
+
+#hform {
+  border: 6px solid #C38DAE;
+  border-radius: 10%;
+  padding: 6%;
+  background-color:#DBC5D1;
+  margin-top: 40px;
+  text-align: center;
+}
