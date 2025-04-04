@@ -1,5 +1,6 @@
+
 .error {
-    color: blue;
+    color: grey;
 }
 html {
   overflow-x: hidden;
@@ -7,11 +8,11 @@ html {
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #e6e6fa;
+  background-color: #white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #303C54;
+  background-color: blue;
   background-repeat: repeat;
   background-size: 10%;
 }
@@ -20,7 +21,7 @@ body {
   border: 6px solid #C38DAE;
   border-radius: 10%;
   padding: 6%;
-  background-color:#DBC5D1;
+  background-color:white;
   margin-top: 40px;
   text-align: center;
 }
