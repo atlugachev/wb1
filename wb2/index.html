@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #696767;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .card {
+            background-color: #c9c1c1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            padding: 15px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .card .text {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="2.png" alt="Фото 2">
+        <div class="text">
+            <p>GET-запрос к главной странице (/) с использованием HTTP 1.0. Сервер вернул ответ 200 OK и сообщение "PHP is working!".</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="3.png" alt="Фото 3">
+        <div class="text">
+            <p>GET-запрос к директории с использованием HTTP 1.1. Сервер вернул ответ 200 OK с содержимым в кодировке UTF-8.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="4.png" alt="Фото 4">
+        <div class="text">
+            <p>Определим размер файла file.tar.gz. Для этого используем метод GET. Content-Length сообщает о размере файла file.tar.gz.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="5.png" alt="Фото 5">
+        <div class="text">
+            <p> Медиатип файла — image/png.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="6.png" alt="Фото 6">
+        <div class="text">
+            <p>Отправка комментария на сервер по адресу /index.php с помощью метода POST. Сервер обработал данные, вернув массив [comment] => www.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="7.png" alt="Фото 7">
+        <div class="text">
+            <p>Укажем Range: bytes=0-99, чтобы получить первые 100 байт файла /file.tar.gz.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="8.png" alt="Фото 8">
+        <div class="text">
+            <p>Определим кодировку ресурса /index.php. charset=UTF-8 - означает, что кодировка UTF-8.</p>
+        </div>
+    </div>
+
+</body>
+</html>
