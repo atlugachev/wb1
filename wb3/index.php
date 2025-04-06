@@ -2,12 +2,13 @@
 header('Content-Type: text/html; charset=UTF-8');
 
 function sanitize($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
+  $data = trim($data);    // удаляет пробелы в начале и конце строки
+  $data = stripslashes($data);    //удаляет экранирующие слеши (\) из строки
+  $data = htmlspecialchars($data);    //преобразует специальные HTML-символы в их HTML-сущности
   return $data;
 }
 
+// Функция валидации
 function validate_form($data) {
   $errors = [];
 
@@ -68,20 +69,12 @@ function validate_form($data) {
   return $errors;
 }
 
-// Подключение к базе данных на kubsu-dev.ru
 $user = 'u68691'; 
 $password = '9388506'; 
-try {
-    $pdo = new PDO('mysql:host=kubsu-dev.ru;dbname=u68691', $user, $password, [
-        PDO::ATTR_PERSISTENT => true, 
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
-    ]);
-} catch (PDOException $e) {
-    die("Ошибка подключения к базе данных: " . $e->getMessage());
-}
+$pdo = new PDO('mysql:host=localhost;dbname=u68691', $user, $password,
+  [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
 
-// Обработка POST-запроса
+// Подготовленный запрос. Не именованные метки.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $errors = validate_form($_POST);
   if (empty($errors)) {
@@ -97,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $stmt = $pdo->prepare("INSERT INTO users (fio, phone, email, dob, gender, bio) VALUES (?, ?, ?, ?, ?, ?)");
           $stmt->execute([$fio, $phone, $email, $dob, $gender, $bio]);
 
-          $user_id = $pdo->lastInsertId();
+          $user_id = $pdo->lastInsertId(); //получаем id текущего пользователя
 
           // Вставка данных в таблицу users_languages
           $languages = $_POST['languages'];
@@ -110,9 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt_user_lang->execute([$user_id, $lang_id]);
           }
 
-          // Перенаправление после успешного сохранения
-          header('Location: ?save=1');
-          exit;
+          echo "<p style='color:green;'>Данные успешно сохранены!</p>";
 
       } catch (PDOException $e) {
           echo "<p style='color:red;'>Ошибка сохранения данных: " . $e->getMessage() . "</p>";
@@ -126,11 +117,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "</div>";
   }
 }
-
-// Обработка GET-запроса (после перенаправления)
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (!empty($_GET['save'])) {
-      echo "<p style='color:green;'>Спасибо, результаты сохранены.</p>";
+      print('Спасибо, результаты сохранены.');
     }
 }
 ?>
