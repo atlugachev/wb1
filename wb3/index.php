@@ -1,6 +1,6 @@
 <?php
 // Подключение к базе данных
-$host = 'sftp://kubsu-dev.ru';
+$host = 'KUBSU-DEV.RU';
 $dbname = 'u68691';
 $username = 'u68691';
 $password = '9388506';
