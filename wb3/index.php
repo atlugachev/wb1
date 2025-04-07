@@ -69,12 +69,10 @@ function validate_form($data) {
   return $errors;
 }
 
-$user = 'u68691';
-$pass = '9388506';
-$db = new PDO('mysql:host=localhost;dbname=u68691',
- $user, $pass,
- [PDO::ATTR_PERSISTENT => true,
- PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+$user = 'u68691'; 
+$password = '9388506'; 
+$pdo = new PDO('mysql:host=localhost;dbname=u68691', $user, $password,
+  [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); 
 
 // Подготовленный запрос. Не именованные метки.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
