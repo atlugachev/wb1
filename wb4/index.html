@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобильный мир</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="container-fluid py-3 border rounded mb-4">
+        <div class="row align-items-center justify-content-between">
+            <!-- Логотип (слева на десктопе) -->
+            <div id="logo" class="col-12 col-lg-3 d-flex justify-content-start align-items-center mb-3 mb-lg-0">
+                <img src="https://www.freepnglogos.com/uploads/logo-car-png/car-logo-png-1.png" width="100" alt="Логотип сайта">
+                <h1 id="site-name" class="text-dark ml-3 ms-3 mb-0 d-lg-none" style="font-size: 24px;">Автомир</h1>
+            </div>
+    
+            <!-- Название сайта (по центру на десктопе) -->
+            <h1 id="site-name" class="col-12 col-lg-6 text-dark text-center d-none d-lg-block mb-0" style="font-size: 32px;">Автомобильный мир</h1>
+    
+            <!-- Навигация -->
+            <nav class="col-12 col-lg-auto nav-desktop mb-4 mb-lg-0 align-self-lg-start">
+                <ul class="nav flex-column flex-lg-row align-items-start ps-0 ms-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark ps-0" href="#link">Модели</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark ps-0" href="#table-header">Характеристики</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark ps-0" href="#form">Тест-драйв</a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+    
+    <main class="container col-12 col-lg-7">
+        <div class="row">
+            <!-- Таблица -->
+            <section id="table" class="col-12 mb-4 p-4 border-section rounded-section order-1 order-lg-2">
+                <h2 id="table-header" class="text-center text-dark mb-3">Технические характеристики</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th>Модель</th>
+                                <th>Двигатель</th>
+                                <th>Разгон 0-100</th>
+                                <th>Цена</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BMW M5</td>
+                                <td>4.4 л V8</td>
+                                <td>3.4 сек</td>
+                                <td>8 500 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Mercedes E63</td>
+                                <td>4.0 л V8</td>
+                                <td>3.5 сек</td>
+                                <td>9 200 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Audi RS6</td>
+                                <td>4.0 л V8</td>
+                                <td>3.6 сек</td>
+                                <td>10 100 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Porsche 911</td>
+                                <td colspan="2">3.0 л Twin-Turbo</td>
+                                <td>12 800 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Tesla Model S</td>
+                                <td>Электродвигатель</td>
+                                <td>2.1 сек</td>
+                                <td>8 900 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Запас хода</td>
+                                <td>637 км</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
+            <!-- Ссылки -->
+            <section id="links" class="col-12 mb-4 p-4 border-section rounded-section order-2 order-lg-1">
+                <h2 id="link" class="text-center text-dark mb-3">Популярные модели</h2>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.bmw.ru/ru/all-models/m-series/m5-sedan/2020/bmw-m5-competition-overview.html" class="link" title="BMW M5">
+                        <img src="P90557401_lowRes_the-all-new-bmw-m5-0.jpg"
+                        height="35%" width="35%"></a></li>
+                    <li><a href="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/e-class/sedan-w213/amg/explore.html" title="Mercedes E63">
+                        <img src="1111.jpg"
+                        height="35%" width="35%"></a></li>
+                    <li><a href="https://www.audi.ru/ru/web/ru/models/rs/rs6-avant.html" title="Audi RS6">
+                        <img src="1ae9bbc6-2511-41cc-9cf4-1462550beed0-942x628.jpg"
+                        height="35%" width="35%"></a></li>
+                    <li><a href="https://www.porsche.com/russia/models/911/" title="Porsche 911">
+                        <img src="456x342.webp"
+                        height="35%" width="35%"></a></li>
+                </ul>
+            </section>
+    
+            <!-- Форма -->
+            <section id="forma" class="col-12 mb-4 p-4 border-section rounded-section order-3">
+                <h2 class="text-center text-dark mb-3">Запись на тест-драйв</h2>
+                <form id="form">
+                    <label for="fio">ФИО:</label><br>
+                    <input type="text" id="fio" name="fio" placeholder="Введите ФИО" required><br><br>
+                
+                    <label for="number">Телефон:</label><br>
+                    <input type="tel" id="number" name="number" placeholder="Введите телефон" required><br><br>
+                
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Введите email" required><br><br>
+                
+                    <label for="birthday">Дата рождения:</label><br>
+                    <input type="date" id="birthday" name="birthday" required><br><br>
+                
+                    <label for="gender">Пол:</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Мужской</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label><br><br>
+                
+                    <label for="recipe">Интересующие модели:</label><br>
+                    <select id="recipe" name="recipe[]" multiple required>
+                        <option value="Значение1">BMW M5</option>
+                        <option value="Значение2">Mercedes E63</option>
+                        <option value="Значение3">Audi RS6</option>
+                        <option value="Значение4">Porsche 911</option>
+                    </select><br><br>
+                
+                    <label for="otziv">Дополнительные пожелания:</label><br>
+                    <textarea id="otziv" name="otziv"></textarea><br><br>
+                
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Согласен на обработку персональных данных</label><br><br>
+                    
+                    <input type="submit" value="Отправить заявку">
+                </form>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="container-fluid py-3 text-left mt-4" style="background-color: #333; color: white;">
+        <p>&copy; Автомобильный мир 2023</p>
+    </footer>
+
+</body>
+</html>
