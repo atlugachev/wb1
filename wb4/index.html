@@ -4,146 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автомобильный мир</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        header {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        h2 {
-            color: #3498db;
-            margin-top: 30px;
-        }
-        .car-model {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .car-model h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .specs {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .spec-name {
-            font-weight: bold;
-        }
-        footer {
-            margin-top: 40px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-            text-align: center;
-            color: #7f8c8d;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Автомобильный мир</h1>
-        <p>Лучшие модели современных автомобилей с подробными характеристиками</p>
+
+    <header class="container-fluid py-3 border rounded mb-4">
+        <div class="row align-items-center justify-content-between">
+            <!-- Логотип (слева на десктопе) -->
+            <div id="logo" class="col-12 col-lg-3 d-flex justify-content-start align-items-center mb-3 mb-lg-0">
+                <img src="https://www.freepnglogos.com/uploads/logo-car-png/car-logo-png-1.png" width="100" alt="Логотип сайта">
+                <h1 id="site-name" class="text-dark ml-3 ms-3 mb-0 d-lg-none" style="font-size: 24px;">Автомир</h1>
+            </div>
+    
+            <!-- Название сайта (по центру на десктопе) -->
+            <h1 id="site-name" class="col-12 col-lg-6 text-dark text-center d-none d-lg-block mb-0" style="font-size: 32px;">Автомобильный мир</h1>
+    
+            <!-- Навигация -->
+            <nav class="col-12 col-lg-auto nav-desktop mb-4 mb-lg-0 align-self-lg-start">
+                <ul class="nav flex-column flex-lg-row align-items-start ps-0 ms-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark ps-0" href="#link">Модели</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark ps-0" href="#table-header">Характеристики</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark ps-0" href="#form">Тест-драйв</a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
     </header>
-
-    <section>
-        <h2>Популярные модели</h2>
-        
-        <div class="car-model">
-            <h3>Tesla Model S Plaid</h3>
-            <div class="specs">
-                <div class="spec-name">Год выпуска:</div>
-                <div>2023</div>
-                <div class="spec-name">Двигатель:</div>
-                <div>3 электромотора, 1020 л.с.</div>
-                <div class="spec-name">Разгон 0-100 км/ч:</div>
-                <div>1.99 сек</div>
-                <div class="spec-name">Запас хода:</div>
-                <div>637 км</div>
-            </div>
-            <div class="gallery">
-                <img src="https://electrodrivemoscow.ru/img/tovary/tesla/model-s/plaid/model-s-plaid-black.jpg" alt="Tesla Model S Plaid">
-                <img src="https://www.tesla.com/sites/default/files/modelsx-new/social/model-s-social.jpg" alt="Tesla Model S интерьер">
-            </div>
+    
+    <main class="container col-12 col-lg-7">
+        <div class="row">
+            <!-- Таблица -->
+            <section id="table" class="col-12 mb-4 p-4 border-section rounded-section order-1 order-lg-2">
+                <h2 id="table-header" class="text-center text-dark mb-3">Технические характеристики</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead> 
+                            <tr>
+                                <th>Модель</th>
+                                <th>Двигатель</th>
+                                <th>Разгон 0-100</th>
+                                <th>Цена</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BMW M5</td>
+                                <td>4.4 л V8</td>
+                                <td>3.4 сек</td>
+                                <td>8 500 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Mercedes E63</td>
+                                <td>4.0 л V8</td>
+                                <td>3.5 сек</td>
+                                <td>9 200 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Audi RS6</td>
+                                <td>4.0 л V8</td>
+                                <td>3.6 сек</td>
+                                <td>10 100 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Porsche 911</td>
+                                <td colspan="2">3.0 л Twin-Turbo</td>
+                                <td>12 800 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Tesla Model S</td>
+                                <td>Электродвигатель</td>
+                                <td>2.1 сек</td>
+                                <td>8 900 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Запас хода</td>
+                                <td>637 км</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>  
+                    </table>
+                </div>
+            </section>
+    
+            <!-- Ссылки -->
+            <section id="links" class="col-12 mb-4 p-4 border-section rounded-section order-2 order-lg-1">
+                <h2 id="link" class="text-center text-dark mb-3">Популярные модели</h2>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.bmw.ru/ru/all-models/m-series/m5-sedan/2020/bmw-m5-competition-overview.html" class="link" title="BMW M5">
+                        <img src="https://www.bmw.ru/content/dam/bmw/marketRU/bmw_ru/all-models/m-series/m5-sedan/2020/overview/bmw-m5-cs-sp-desktop.jpg" 
+                        height="35%" width="35%"></a></li>
+                    <li><a href="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/e-class/sedan-w213/amg/explore.html" title="Mercedes E63">
+                        <img src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/e-class/sedan-w213/amg/_jcr_content/image.MQ6.2.2x.20210311111400.png" 
+                        height="35%" width="35%"></a></li>
+                    <li><a href="https://www.audi.ru/ru/web/ru/models/rs/rs6-avant.html" title="Audi RS6">
+                        <img src="https://www.audi.ru/content/dam/nemo/models/rs/rs6-avant/1920x1080/1920x1080-rs6-avant-2.jpg" 
+                        height="35%" width="35%"></a></li>
+                    <li><a href="https://www.porsche.com/russia/models/911/" title="Porsche 911">
+                        <img src="https://files.porsche.com/filestore/image/multimedia/none/992-gt3-modelimage-sideshot/model/765dfc51-51bc-11eb-80d1-005056bbdc38/porsche-model.png" 
+                        height="35%" width="35%"></a></li>
+                </ul>
+            </section>
+    
+            <!-- Форма -->
+            <section id="forma" class="col-12 mb-4 p-4 border-section rounded-section order-3">
+                <h2 class="text-center text-dark mb-3">Запись на тест-драйв</h2>
+                <form id="form">
+                    <label for="fio">ФИО:</label><br>
+                    <input type="text" id="fio" name="fio" placeholder="Введите ФИО" required><br><br>
+                
+                    <label for="number">Телефон:</label><br>
+                    <input type="tel" id="number" name="number" placeholder="Введите телефон" required><br><br>
+                
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Введите email" required><br><br>
+                
+                    <label for="birthday">Дата рождения:</label><br>
+                    <input type="date" id="birthday" name="birthday" required><br><br>
+                
+                    <label for="gender">Пол:</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Мужской</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label><br><br>
+                
+                    <label for="recipe">Интересующие модели:</label><br>
+                    <select id="recipe" name="recipe[]" multiple required>
+                        <option value="Значение1">BMW M5</option>
+                        <option value="Значение2">Mercedes E63</option>
+                        <option value="Значение3">Audi RS6</option>
+                        <option value="Значение4">Porsche 911</option>
+                    </select><br><br>
+                
+                    <label for="otziv">Дополнительные пожелания:</label><br>
+                    <textarea id="otziv" name="otziv"></textarea><br><br>
+                
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Согласен на обработку персональных данных</label><br><br>
+                    
+                    <input type="submit" value="Отправить заявку">
+                </form>
+            </section>
         </div>
-
-        <div class="car-model">
-            <h3>Porsche 911 Turbo S</h3>
-            <div class="specs">
-                <div class="spec-name">Год выпуска:</div>
-                <div>2023</div>
-                <div class="spec-name">Двигатель:</div>
-                <div>3.7 л Twin-Turbo, 650 л.с.</div>
-                <div class="spec-name">Разгон 0-100 км/ч:</div>
-                <div>2.7 сек</div>
-                <div class="spec-name">Макс. скорость:</div>
-                <div>330 км/ч</div>
-            </div>
-            <div class="gallery">
-                <img src="https://www.porsche.com/russia/_russia_/models/911/911-turbo-models/911-turbo-s/hero-banner-mobile.jpg" alt="Porsche 911 Turbo S">
-                <img src="https://www.porsche.com/russia/_russia_/models/911/911-turbo-models/911-turbo-s/interior/slider/911-turbo-s-21-interior-01.jpg" alt="Porsche 911 интерьер">
-            </div>
-        </div>
-
-        <div class="car-model">
-            <h3>Mercedes-Benz S-Class</h3>
-            <div class="specs">
-                <div class="spec-name">Год выпуска:</div>
-                <div>2023</div>
-                <div class="spec-name">Двигатель:</div>
-                <div>S 580 4MATIC, 503 л.с.</div>
-                <div class="spec-name">Разгон 0-100 км/ч:</div>
-                <div>4.4 сек</div>
-                <div class="spec-name">Особенности:</div>
-                <div>Автономный режим движения 3 уровня</div>
-            </div>
-            <div class="gallery">
-                <img src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/s-class/s-class-w223/overview/_jcr_content/root/paragraph/paragraph-right/paragraphimage/image/MQ6-12-image-20220913135708/01-mercedes-benz-s-class-w223-2020-2560x1440.jpeg" alt="Mercedes S-Class">
-                <img src="https://www.mercedes-benz-moscow.ru/upload/iblock/7e2/7e2f8a2a5d6c0d5b7a8c6b3e4f5d6c7.jpg" alt="Mercedes S-Class интерьер">
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Новости автомобильного мира</h2>
-        <div class="car-model">
-            <h3>Электрический Rolls-Royce Spectre</h3>
-            <p>Rolls-Royce представил свой первый полностью электрический автомобиль Spectre. Это ультра-люкс купе с запасом хода 520 км и разгоном до 100 км/ч за 4.5 секунды.</p>
-        </div>
-        <div class="car-model">
-            <h3>Новый Ford Mustang 2024</h3>
-            <p>Седьмое поколение легендарного Ford Mustang дебютировало с обновленным дизайном и модернизированной линейкой двигателей, включая 5.0-литровый V8 с 486 л.с.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2023 Автомобильный мир. Все права защищены.</p>
-        <p>Контактная информация: info@carworld.ru</p>
+    </main>
+    
+    <footer class="container-fluid py-3 text-left mt-4" style="background-color: #333; color: white;">
+        <p>&copy; Автомобильный мир 2023</p>
     </footer>
+
 </body>
 </html>
