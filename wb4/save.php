@@ -2,8 +2,8 @@
 session_start();
 
 $dsn = 'mysql:host=localhost;dbname=u68860;charset=utf8';
-$username = 'u68860';
-$password = '8500150';
+$username = 'u68691';
+$password = '9388506';
 try {
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
