@@ -21,7 +21,7 @@ unset($_SESSION['form_values']);
 
 // Если пользователь авторизован, загружаем его данные
 if (isset($_SESSION['user_id'])) {
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
+    $stmt = $pdo->prepare("SELECT * FROM users2 WHERE id = ?");
     $stmt->execute([$_SESSION['user_id']]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
